@@ -1,4 +1,4 @@
-const networkSplitter = (network, {ropsten, rinkeby, mainnet, local}) => {
+export function networkSplitter(network, {ropsten, rinkeby, mainnet, local}) {
     switch (network) {
         case 1:
         case '1':
@@ -20,18 +20,13 @@ const networkSplitter = (network, {ropsten, rinkeby, mainnet, local}) => {
         default:
             throw new Error(`Unknown network ID ${network}`);
     }
-};
+}
 
-const getNetwork = (network) => {
+export function getNetwork(network) {
     return networkSplitter(network, {
         mainnet: 'mainnet',
         ropsten: 'ropsten',
         rinkeby: 'rinkeby',
         local: 'local'
     });
-};
-
-module.exports = {
-    getNetwork,
-    networkSplitter
-};
+}
