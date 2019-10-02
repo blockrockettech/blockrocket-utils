@@ -1,0 +1,14 @@
+{
+  "name": "blockrocket-utils",
+  "version": "1.0.0",
+  "description": "Collection of common blockchain utils packaged up within an NPM package",
+  "main": "src/index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockrockettech/blockrocket-utils.git"
+  },
+  "author": "Blockrocket.tech",
+  "license": "MIT"
+}
