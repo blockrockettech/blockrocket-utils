@@ -1,8 +1,8 @@
 {
   "name": "@blockrocket/utils",
-  "version": "1.0.3",
-  "description": "Collection of common blockchain utils writtin in TS and packaged up within an NPM package",
-  "main": "src/index.ts",
+  "version": "1.0.4",
+  "description": "Collection of common blockchain utils packaged up within an NPM package",
+  "main": "src/index.js",
   "scripts": {
   },
   "repository": {
