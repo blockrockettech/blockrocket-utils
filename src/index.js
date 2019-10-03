@@ -57,7 +57,7 @@ const getNetworkName = (network) => {
  * @param {string?} infuraKey Optional as not all networks require this
  * @return {string} the RPC connect string
  */
-const getRpcConnectionUri = (network, infuraKey) => {
+const getHttpRpcConnectionUri = (network, infuraKey) => {
     const networkName = getNetworkName(network);
 
     switch (networkName) {
@@ -81,5 +81,5 @@ const getRpcConnectionUri = (network, infuraKey) => {
 module.exports = {
     getNetworkName,
     networkSplitter,
-    getRpcConnectionUri
+    getHttpRpcConnectionUri
 };

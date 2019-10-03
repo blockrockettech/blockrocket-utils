@@ -1,6 +1,8 @@
-export function getNetworkName(network: any): any;
+interface NetworkNameMappings {ropsten: string, rinkeby: string, mainnet: string, local: string, sokol: string, poa: string, xdai: string}
 
-export function getRpcConnectionUri(network: any, infuraKey: any): any;
+export function getNetworkName(network: any): string;
 
-export function networkSplitter(network: any, {ropsten, rinkeby, mainnet, local, sokol, poa, xdai}: any): any;
+export function getHttpRpcConnectionUri(network: any, infuraKey: string): string;
+
+export function networkSplitter(network: any, {ropsten, rinkeby, mainnet, local, sokol, poa, xdai}: NetworkNameMappings): string;
 
