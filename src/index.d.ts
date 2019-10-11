@@ -6,3 +6,4 @@ export function getHttpRpcConnectionUri(network: any, infuraKey: string): string
 
 export function networkSplitter(network: any, {ropsten, rinkeby, mainnet, local, sokol, poa, xdai}: NetworkNameMappings): string;
 
+export function getAccountAddress(accounts: string[], index: number, network: string, mnemonic: string, infuraKey: string): string;

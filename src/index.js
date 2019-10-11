@@ -1,3 +1,5 @@
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+
 const networkSplitter = (network, {ropsten, rinkeby, mainnet, local, sokol, poa, xdai}) => {
     switch (network) {
         case 1:
@@ -78,8 +80,19 @@ const getHttpRpcConnectionUri = (network, infuraKey) => {
     }
 };
 
+const getAccountAddress = (accounts, index, network, mnemonic, infuraKey) => {
+    let addr = accounts[index];
+
+    if(!addr && mnemonic && infuraKey) {
+        addr = new HDWalletProvider(mnemonic, getHttpRpcConnectionUri(network, infuraKey), index).getAddress();
+    }
+
+    return addr;
+};
+
 module.exports = {
     getNetworkName,
     networkSplitter,
-    getHttpRpcConnectionUri
+    getHttpRpcConnectionUri,
+    getAccountAddress
 };
